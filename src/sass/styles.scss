@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import url('https://unpkg.com/bulmaswatch/cyborg/bulmaswatch.min.css');
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/regular.scss";
+@import "./fontawesome/scss/brands.scss";
+
+.email {
+  @extend %fa-icon;
+  @extend .far;
+
+  &:before {
+    content: fa-content($fa-var-envelope);
+  }
+}
+
+.github {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-github);
+  }
+}
+
+.strava {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-strava);
+  }
+}
+
+.linkedin {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-linkedin);
+  }
+}
