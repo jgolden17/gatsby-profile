@@ -1,31 +1,34 @@
 import React from 'react';
-import Header from '../Header';
+import {
+  Heading,
+  Hero,
+} from 'react-bulma-components/dist';
 import Seo from '../Seo';
 import Iam from '../Iam';
-import '../../styles.scss';
+import Social from '../Social';
+import '../../sass/styles.scss';
 
 const Landing = () => (
-  <section className="hero is-fullheight">
+  <Hero size="fullheight">
     <Seo title="Jonathan Golden Ormsby" />
-    <div className="hero-head">
-      <Header />
-    </div>
-    <div className="hero-body">
-     <div className="container">
-        <h1 className="title is-1" style={{ marginBottom: '1rem' }}>Jonathan Golden Ormsby</h1>
+    <Hero.Body>
+      <div style={{ margin: 'auto' }}>
+        <Heading
+          title={true}
+          size="2"
+          renderAs="h1"
+          className="has-text-info"
+          style={{ marginBottom: '1rem' }}
+        >
+          Jonathan Golden Ormsby
+        </Heading>
         <Iam a="Software Developer" />
         <Iam a="cyclist" />
         <Iam a="terrible musician" />
-        <a
-          className="button is-info is-outlined is-medium"
-          style={{ marginTop: '4rem' }}
-          href="mailto:jonathan.golden.ormsby@gmail.com"
-        >
-          Contact Me
-        </a>
+        <Social />
       </div>
-    </div>
-  </section>
+    </Hero.Body>
+  </Hero>
 );
 
 export default Landing;
