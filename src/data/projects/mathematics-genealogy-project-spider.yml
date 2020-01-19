@@ -1,0 +1,6 @@
+title: 'Mathematics Genealogy Project Spider'
+packageName: 'mathgenproject-jgolden17'
+description: 'A webspider for the Mathematics Genealogy Project.'
+url: 'https://github.com/jgolden17/mathgenproject'
+language: 'Python'
+role: 'author'

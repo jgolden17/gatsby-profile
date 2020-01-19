@@ -1,0 +1,12 @@
+- name: Email
+  href: mailto:jonathan.golden.ormsby@gmail.com
+  icon: envelope
+- name: GitHub
+  href: https://github.com/jgolden17
+  icon: fab-github
+- name: LinkedIn
+  href: https://www.linkedin.com/in/jonathan-golden-ormsby
+  icon: fab-linkedin
+- name: Strava
+  href: https://www.strava.com/athletes/40062660
+  icon: fab-strava

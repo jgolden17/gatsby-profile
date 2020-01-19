@@ -9,8 +9,8 @@ import Social from '../Social';
 import '../../sass/styles.scss';
 
 const Landing = () => (
-  <Hero size="fullheight">
-    <Seo title="Jonathan Golden Ormsby" />
+  <Hero color="primary" size="fullheight">
+    <Seo />
     <Hero.Body>
       <div style={{ margin: 'auto' }}>
         <Heading
