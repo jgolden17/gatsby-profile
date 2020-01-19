@@ -10,7 +10,9 @@ library.add(fab, faEnvelope);
 
 const Layout = ({ children }) => (
   <React.Fragment>
-    <main className="is-family-monospace">{children}</main>
+    <main className="is-family-monospace">
+      {children}
+    </main>
   </React.Fragment>
 );
 
