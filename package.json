@@ -1,7 +1,7 @@
 {
-  "name": "@jgolden17/gatsby-profile",
+  "name": "@jgolden17/personal-profile",
   "private": true,
-  "description": "jgolden17 profile in Gatsby",
+  "description": "My personal profile in Gatsby",
   "version": "0.1.0",
   "author": "Jonathan Golden Ormsby <jonathan.golden.ormsby@gmail.com>",
   "dependencies": {
@@ -28,8 +28,7 @@
     "react": "^16.12.0",
     "react-bulma-components": "^3.1.3",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "strava-fetch": "file:../strava-fetch/strava-fetch-0.1.0.tgz"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "eslint-config-amex": "^11.1.0",
@@ -42,15 +41,14 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://github.com/jgolden17/jgolden17.github.io.git",
+    "deploy": "gatsby build --prefix-paths && node ./deploy.js",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jgolden17/gatsby-profile.git"
+    "url": "https://github.com/jgolden17/personal-profile.git"
   }
 }
