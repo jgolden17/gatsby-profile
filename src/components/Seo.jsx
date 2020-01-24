@@ -18,6 +18,7 @@ function SEO({
             title
             description
             author
+            googleSiteVerification
           }
         }
       }
@@ -31,9 +32,12 @@ function SEO({
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={site.siteMetadata.title}
       meta={[
+        {
+          name: 'google-site-verification',
+          content: site.siteMetadata.googleSiteVerification,
+        },
         {
           httpEquiv: 'Content-Type',
           content: 'text/html charset=utf-8',

@@ -7,10 +7,7 @@ import '../sass/styles.scss';
 
 const Index = () => (
   <Layout>
-    <Seo
-      title="Jonathan Ormsby | Software Engineer"
-      description="Software Engineer at American Express"
-    />
+    <Seo />
     <Landing />
     <Projects />
   </Layout>
