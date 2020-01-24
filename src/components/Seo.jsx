@@ -8,6 +8,7 @@ function SEO({
   lang,
   meta,
   title,
+  children,
 }) {
   const { site } = useStaticQuery(
     graphql`
@@ -33,6 +34,14 @@ function SEO({
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
+        {
+          httpEquiv: 'Content-Type',
+          content: 'text/html charset=utf-8',
+        },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1',
+        },
         {
           name: 'description',
           content: metaDescription,
@@ -66,7 +75,9 @@ function SEO({
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      {children}
+    </Helmet>
   );
 }
 
@@ -74,6 +85,7 @@ SEO.defaultProps = {
   lang: 'en',
   meta: [],
   description: '',
+  children: null,
 };
 
 SEO.propTypes = {
@@ -81,6 +93,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  children: PropTypes.node,
 };
 
 export default SEO;
