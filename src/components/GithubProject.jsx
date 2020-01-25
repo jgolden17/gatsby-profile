@@ -16,6 +16,7 @@ const GithubProject = ({
   packageName,
   language,
   role,
+  url,
 }) => (
   <Card style={{ marginBottom: '1rem' }}>
     <Card.Content>
@@ -27,15 +28,15 @@ const GithubProject = ({
         </Media.Item>
         <Media.Item>
           <Content>
-            <Heading size={4} style={{ textTransform: 'none' }}>{title}</Heading>
-            <Heading
-              subtitle={true}
-              size={6}
-              style={{ textTransform: 'none' }}
+            <a
+              href={url}
+              title={`View ${title} on Github`}
+              rel="external"
+              className="title is-4"
             >
-              {packageName}
-            </Heading>
-            <p>{description}</p>
+              {title}
+            </a>
+            <p className="mt">{description}</p>
           </Content>
           <Level breakpoint="mobile">
             <Level.Side align="left">
@@ -53,6 +54,7 @@ const GithubProject = ({
 );
 
 GithubProject.propTypes = {
+  url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   packageName: PropTypes.string.isRequired,

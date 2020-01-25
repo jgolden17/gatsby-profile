@@ -4,7 +4,7 @@ import {
   Container,
   Section,
 } from 'react-bulma-components/dist';
-import GithubProject from '../GithubProject';
+import Project from '../Project';
 import Tabs from '../Tabs';
 import useProjectsQuery from '../../hooks/useProjects';
 
@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <Section>
       <Container style={{ maxWidth: '800px' }}>
-        <Heading>Projects</Heading>
+        <Heading renderAs="h2">Projects</Heading>
         <Tabs>
           {
             (activeTab) => {
@@ -25,7 +25,7 @@ const Projects = () => {
                 );
 
               return projectsByLanuage.map((project) => (
-                <GithubProject
+                <Project
                   key={project.id}
                   title={project.title}
                   packageName={project.packageName}

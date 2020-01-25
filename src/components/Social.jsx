@@ -26,6 +26,8 @@ const Social = () => {
               href={link.href}
               outlined={true}
               color="info"
+              rel="author"
+              title={link.title}
             >
               <Icon>
                 <FontAwesomeIcon icon={getIcon(link.icon)} />

@@ -8,6 +8,7 @@ function useSocialLinks() {
           name
           href
           icon
+          title
         }
       }
     }
