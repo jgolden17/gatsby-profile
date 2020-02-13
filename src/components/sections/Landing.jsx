@@ -5,7 +5,7 @@ import Social from '../Social';
 import '../../sass/styles.scss';
 
 const Landing = () => (
-  <section className="hero is-fullheight is-primary">
+  <section className="hero is-fullheight is-dark">
     <Seo />
     <div className="hero-body">
       <div className="container">
@@ -14,7 +14,7 @@ const Landing = () => (
         </h1>
         <Iam a="cyclist" />
         <Iam a="musician" />
-        <Iam a="Software Developer" />
+        <Iam a="software developer" />
         <Social />
       </div>
     </div>

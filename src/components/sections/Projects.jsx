@@ -15,7 +15,7 @@ const Projects = () => {
           </h2>
         </div>
       </div>
-      <div className="hero-foot">
+      <div className="hero-body">
         <nav className="tabs">
           <div className="container">
             <ul>

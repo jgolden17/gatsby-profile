@@ -2,6 +2,7 @@
 const ghPages = require('gh-pages');
 
 ghPages.publish('public', {
+  branch: 'master',
   repo: 'https://github.com/jgolden17/jgolden17.github.io.git',
 }, (error) => {
   if (error) {

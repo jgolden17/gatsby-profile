@@ -24,9 +24,9 @@ const Social = () => {
             <Button
               renderAs="a"
               href={link.href}
-              outlined={true}
               rel="author"
               title={link.title}
+              className="is-primary"
             >
               <Icon>
                 <FontAwesomeIcon icon={getIcon(link.icon)} />
