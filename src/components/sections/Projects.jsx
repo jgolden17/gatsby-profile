@@ -1,45 +1,62 @@
 import React from 'react';
-import {
-  Heading,
-  Container,
-  Section,
-} from 'react-bulma-components/dist';
 import Project from '../Project';
-import Tabs from '../Tabs';
-import useProjectsQuery from '../../hooks/useProjects';
+import Tab from '../ProjectTab';
+import useProjects from '../../hooks/useProjects';
 
 const Projects = () => {
-  const projects = useProjectsQuery();
+  const { projects, activeFilter, setFilter } = useProjects();
 
   return (
-    <Section>
-      <Container style={{ maxWidth: '800px' }}>
-        <Heading renderAs="h2">Projects</Heading>
-        <Tabs>
-          {
-            (activeTab) => {
-              const projectsByLanuage = activeTab === 'All'
-                ? projects
-                : projects.filter(
-                  (project) => project.language === activeTab
-                );
-
-              return projectsByLanuage.map((project) => (
-                <Project
-                  key={project.id}
-                  title={project.title}
-                  packageName={project.packageName}
-                  description={project.description}
-                  url={project.url}
-                  language={project.language}
-                  role={project.role}
-                />
-              ));
-            }
-          }
-        </Tabs>
-      </Container>
-    </Section>
+    <section className="hero">
+      <div className="hero-body">
+        <div className="container has-text-centered">
+          <h2 className="title">
+            Projects
+          </h2>
+        </div>
+      </div>
+      <div className="hero-foot">
+        <nav className="tabs">
+          <div className="container">
+            <ul>
+              <Tab
+                isActive={activeFilter === ''}
+                label="All"
+                onClick={() => setFilter('')}
+              />
+              <Tab
+                isActive={activeFilter === 'language:React'}
+                label="React"
+                onClick={() => setFilter('language:React')}
+              />
+              <Tab
+                isActive={activeFilter === 'language:JavaScript'}
+                label="JavaScript"
+                onClick={() => setFilter('language:JavaScript')}
+              />
+              <Tab
+                isActive={activeFilter === 'language:Python'}
+                label="Python"
+                onClick={() => setFilter('language:Python')}
+              />
+              <Tab
+                isActive={activeFilter === 'role:author'}
+                label="Authored"
+                onClick={() => setFilter('role:author')}
+              />
+              <Tab
+                isActive={activeFilter === 'role:contributor'}
+                label="Contributor"
+                onClick={() => setFilter('role:contributor')}
+              />
+            </ul>
+          </div>
+        </nav>
+        {
+          projects.map((project) => <Project {...project} />)
+        }
+      </div>
+    </section>
   );
 };
 

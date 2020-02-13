@@ -1,27 +1,42 @@
+import { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function useProjects() {
+function useProjects(filter = '') {
+  const [activeFilter, setFilter] = useState(filter);
+
   const projectsQuery = useStaticQuery(graphql`
     query {
       allProjectsYaml {
-        edges {
-          node {
-            description
-            id
-            language
-            packageName
-            role
-            title
-            url
+        nodes {
+          description
+          id
+          language
+          packageName
+          role
+          title
+          url
+          image {
+            absolutePath
           }
         }
       }
     }
   `);
 
-  const { allProjectsYaml: { edges } } = projectsQuery;
+  const { allProjectsYaml: { nodes } } = projectsQuery;
 
-  return edges.map((edge) => edge.node);
+  let projects = nodes;
+
+  if (activeFilter) {
+    const [key, value] = activeFilter.split(':');
+    projects = nodes.filter((node) => node[key] === value);
+  }
+
+  return {
+    projects,
+    activeFilter,
+    setFilter,
+  };
 }
 
 export default useProjects;

@@ -25,7 +25,6 @@ const Social = () => {
               renderAs="a"
               href={link.href}
               outlined={true}
-              color="info"
               rel="author"
               title={link.title}
             >

@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    title: 'Jonathan Ormsby - Software Engineer',
+    title: 'Jonathan Golden - Software Engineer',
     description: 'Software Developer at American Express',
     author: '@jgolden17',
     googleSiteVerification: 'YM65urxVqPi5q3nXVGbzeu8g8zKcGtxb6_qBq_20eng',

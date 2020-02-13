@@ -3,7 +3,7 @@
   "private": true,
   "description": "My personal profile in Gatsby",
   "version": "0.1.0",
-  "author": "Jonathan Golden Ormsby <jonathan.golden.ormsby@gmail.com>",
+  "author": "Jonathan Golden <jonathan.golden@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
@@ -22,7 +22,6 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-sharp": "^2.3.7",
     "gatsby-transformer-yaml": "^2.2.23",
-    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -32,6 +31,7 @@
   },
   "devDependencies": {
     "eslint-config-amex": "^11.1.0",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },
   "keywords": [

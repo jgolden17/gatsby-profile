@@ -4,3 +4,4 @@ description: 'Parrot is a set of tools that allow you to create HTTP mocks and o
 url: 'https://github.com/americanexpress/parrot'
 language: 'JavaScript'
 role: 'maintainer'
+image: '../../images/projects/parrot.png'
