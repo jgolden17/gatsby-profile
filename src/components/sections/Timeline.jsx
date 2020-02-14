@@ -17,7 +17,7 @@ const TimelineItem = ({ date, description }) => (
 );
 
 const Timeline = () => (
-  <section className="hero is-primary">
+  <section id="experience" className="hero is-primary">
     <div className="hero-body">
       <div className="container has-text-centered">
         <h2 className="title has-text-grey-darker">

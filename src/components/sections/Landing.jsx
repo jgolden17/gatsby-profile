@@ -2,11 +2,15 @@ import React from 'react';
 import Seo from '../Seo';
 import Iam from '../Iam';
 import Social from '../Social';
+import Header from '../Header';
 import '../../sass/styles.scss';
 
 const Landing = () => (
-  <section className="hero is-fullheight is-dark">
+  <section id="home" className="hero is-fullheight is-dark">
     <Seo />
+    <div className="hero-head">
+      <Header />
+    </div>
     <div className="hero-body">
       <div className="container">
         <h1 className="title is-size-1">

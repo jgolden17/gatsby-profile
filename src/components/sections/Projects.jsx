@@ -7,7 +7,7 @@ const Projects = () => {
   const { projects, activeFilter, setFilter } = useProjects();
 
   return (
-    <section className="hero">
+    <section id="projects" className="hero">
       <div className="hero-body">
         <div className="container has-text-centered">
           <h2 className="title">
