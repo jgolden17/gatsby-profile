@@ -18,7 +18,7 @@ const Social = () => {
 
   return (
     <Container style={{ marginTop: '2rem' }}>
-      <p className="buttons">
+      <p className="buttons is-hidden-mobile">
         {
           socialLinks.map((link) => (
             <Button
@@ -27,6 +27,25 @@ const Social = () => {
               rel="author"
               title={link.title}
               className="is-primary"
+            >
+              <Icon>
+                <FontAwesomeIcon icon={getIcon(link.icon)} />
+              </Icon>
+              <span>{link.name}</span>
+            </Button>
+          ))
+        }
+      </p>
+      <p className="buttons is-hidden-tablet">
+        {
+          socialLinks.map((link) => (
+            <Button
+              renderAs="a"
+              href={link.href}
+              rel="author"
+              title={link.title}
+              className="is-primary is-medium is-fullwidth"
+              style={{ marginTop: '1rem' }}
             >
               <Icon>
                 <FontAwesomeIcon icon={getIcon(link.icon)} />
