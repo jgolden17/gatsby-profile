@@ -1,5 +1,4 @@
 import React from 'react';
-import smoothSroll from 'smooth-scroll';
 import { useStaticQuery, graphql } from 'gatsby';
 import SEO from '@americanexpress/react-seo';
 import Layout from '../components/Layout';
@@ -10,6 +9,7 @@ import Footer from '../components/sections/Footer';
 import '../sass/styles.scss';
 
 if (typeof window !== 'undefined') {
+  const smoothSroll = require('smooth-scroll');
   smoothSroll('a[href*="#"]');
 }
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import sortProjects from '../utils/sortProjects';
 
 function useProjects(filter = '') {
   const [activeFilter, setFilter] = useState(filter);
@@ -33,7 +34,7 @@ function useProjects(filter = '') {
   }
 
   return {
-    projects,
+    projects: sortProjects(projects),
     activeFilter,
     setFilter,
   };
