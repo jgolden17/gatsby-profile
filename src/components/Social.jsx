@@ -7,7 +7,7 @@ const Social = () => {
   const socialLinks = useSocialLinks();
 
   return (
-    <p className="buttons">
+    <p className="buttons are-medium">
       {
         socialLinks.map((link) => (
           <a
@@ -20,9 +20,8 @@ const Social = () => {
             rel="noopener noreferrer"
           >
             <span className="icon">
-              <FontAwesomeIcon icon={getIcon(link.icon)} />
+              <FontAwesomeIcon icon={getIcon(link.icon)} size="lg" />
             </span>
-            <span>{link.name}</span>
           </a>
         ))
       }

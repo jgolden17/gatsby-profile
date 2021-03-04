@@ -2,8 +2,8 @@
 const ghPages = require('gh-pages');
 
 ghPages.publish('public', {
-  branch: 'master',
+  branch: 'main',
   repo: 'https://github.com/jgolden17/jgolden17.github.io.git',
 }, () => {
-  console.log('\nPublished to master\n');
+  console.log('\nPublished to main\n');
 });
