@@ -20,6 +20,7 @@
     "gatsby-plugin-sass": "^2.1.27",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-source-filesystem": "^2.1.40",
+    "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^2.3.7",
     "gatsby-transformer-yaml": "^2.2.23",
     "gh-pages": "^2.2.0",

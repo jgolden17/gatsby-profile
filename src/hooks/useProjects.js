@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 function useProjects() {
   const projectsQuery = useStaticQuery(graphql`
     query {
-      allProjectsYaml {
+      allProjectsYaml(sort: { fields: [title], order: ASC }) {
         edges {
           node {
             description
@@ -12,6 +12,7 @@ function useProjects() {
             packageName
             role
             title
+            subtitle
             url
           }
         }

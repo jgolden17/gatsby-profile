@@ -1,69 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Heading,
-  Card,
-  Media,
-  Icon,
-  Content,
-  Level,
-} from 'react-bulma-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Project = ({
   title,
+  subtitle,
   description,
-  packageName,
-  language,
   role,
   url,
-}) => {
+}) => (
+  <div className="card">
+    <div className="card-content">
+      <div className="media">
+        <div className="media-left">
+          <FontAwesomeIcon icon={['fab', 'github']} size="2x" />
+        </div>
+        <div className="media-content">
+          <p className="title is-4">{title}</p>
+          <p className="subtitle is-6 has-text-dark">{subtitle}</p>
+        </div>
+      </div>
+      <div className="content">
+        {description}
+      </div>
+      <div className="content">
+        <span className="tag">{role}</span>
+      </div>
+    </div>
+  </div>
+);
 
-  return (
-    <Card style={{ marginBottom: '1rem' }}>
-      <Card.Content>
-        <Media renderAs="article">
-          <Media.Item renderAs="figure" position="left">
-            <Icon className="is-large">
-              <FontAwesomeIcon icon={['fab', 'github']} size="3x" />
-            </Icon>
-          </Media.Item>
-          <Media.Item>
-            <Content>
-              <a
-                href={url}
-                title={`View ${title} on Github`}
-                rel="external"
-                className="title is-4"
-              >
-                {title}
-              </a>
-            </Content>
-            <Content>
-              <p>{description}</p>
-            </Content>
-            <div className="">
-              <p className="">
-                <span className="">
-                  {language}
-                </span>
-              </p>
-              <p className="">
-                <span className="">
-                  {role}
-                </span>
-              </p>
-              <a className="">
-                <span className="">
-                  View on Github
-                </span>
-              </a>
-            </div>
-          </Media.Item>
-        </Media>
-      </Card.Content>
-    </Card>
-  );
+Project.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default Project;

@@ -2,17 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import Footer from './Footer';
 import './layout.css';
 import '../sass/styles.scss';
 
-library.add(fab, faEnvelope);
+library.add(fab, faEnvelope, faFileAlt);
 
 const Layout = ({ children }) => (
   <React.Fragment>
-    <main className="is-family-monospace">
+    <main className="is-family-monospace" style={{ position: 'relative' }}>
       {children}
     </main>
+    <Footer />
   </React.Fragment>
 );
 

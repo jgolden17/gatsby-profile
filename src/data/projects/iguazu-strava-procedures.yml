@@ -1,6 +1,0 @@
-title: 'Iguazu Strava Procedures'
-packageName: 'iguazu-strava-procedures'
-description: 'Iguazu procedures for consuming the Strava API.'
-url: ''
-language: 'JavaScript'
-role: 'author'

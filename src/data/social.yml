@@ -1,16 +1,16 @@
 - name: Email
-  href: mailto:jonathan.golden.ormsby@gmail.com
+  href: mailto:jongolden17@gmail.com
   icon: envelope
   title: Email me
 - name: GitHub
-  href: https://github.com/jgolden17
+  href: https://github.com/jgolden17/
   icon: fab-github
   title: Follow me on Github
 - name: LinkedIn
-  href: https://www.linkedin.com/in/jonathan-golden-ormsby
+  href: https://www.linkedin.com/in/jonathan-golden/
   icon: fab-linkedin
   title: Connect with me on LinkedIn
 - name: Strava
-  href: https://www.strava.com/athletes/40062660
+  href: https://www.strava.com/athletes/40062660/
   icon: fab-strava
   title: Follow me on Strava
