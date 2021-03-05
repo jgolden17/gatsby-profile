@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section className="section">
       <div className="container is-max-desktop">
-        <h2 className="title has-text-centered-mobile">
+        <h2 className="title is-size-3-desktop is-size-4-mobile has-text-centered-mobile">
           {title}
         </h2>
         <Content content={content} />

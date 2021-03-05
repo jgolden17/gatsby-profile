@@ -16,7 +16,7 @@ const Project = ({
           <FontAwesomeIcon icon={['fab', 'github']} size="2x" />
         </div>
         <div className="media-content">
-          <p className="title is-4">{title}</p>
+          <p className="title is-size-4-tablet is-size-5-mobile">{title}</p>
           <p className="subtitle is-6 has-text-dark">{subtitle}</p>
         </div>
       </div>

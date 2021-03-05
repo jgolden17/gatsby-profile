@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <section className="section has-background-white-bis">
       <div className="container is-max-desktop">
-        <h2 className="title has-text-centered-mobile">
+        <h2 className="title is-size-3-tablet is-size-4-mobile has-text-centered-mobile">
           Some of the code I&apos;ve been working on
         </h2>
         <div className="columns is-multiline is-desktop">
