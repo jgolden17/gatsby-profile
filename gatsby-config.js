@@ -4,6 +4,7 @@ module.exports = {
     title: 'Jonathan Golden',
     description: 'Full Stack Developer',
     author: '@jgolden17',
+    siteUrl: 'https://jonathan-golden.me/',
     googleSiteVerification: 'YM65urxVqPi5q3nXVGbzeu8g8zKcGtxb6_qBq_20eng',
   },
   plugins: [
@@ -32,6 +33,7 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-cname',
     {
       resolve: 'gatsby-plugin-sass',
       options: {
